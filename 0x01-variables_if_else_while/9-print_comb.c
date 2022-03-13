@@ -9,19 +9,17 @@
  */
 int main(void)
 {
-	int num;
+	char base_16;
+	for (base_16 = 97 ; base_16 <= 102; base_16++)
+{putchar(base_16);
+}
+for (base_16 = 97 ; base_16 <= 102; base_16++
+}
+{
+putchar(base_16);
+}
 
-	num = 0;
-	while (num <= 9)
-	{
-		putchar((num % 10) + '0');
-		if (num < 9)
-		{
-		putchar(',');
-		putchar(' ');
-		}
-		num++;
-	}
-	putchar('\n');
-	return (0);
+putchar('\n');
+return(0);
+
 }
