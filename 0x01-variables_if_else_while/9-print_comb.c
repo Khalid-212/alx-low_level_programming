@@ -1,30 +1,27 @@
 #include <stdio.h>
 
-/**
-* main - Lanzador.
-*
-* Return: Always 0.
-*/
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ *
+ */
 int main(void)
 {
-	int a = '0';
+	int num;
 
-
-	while (a <= '9')
+	num = 0;
+	while (num <= 9)
 	{
-		putchar(a);
-		if (a == '9')
+		putchar((num % 10) + '0');
+		if (num < 9)
 		{
-			putchar('\n');
-			return (0);
+		putchar(',');
+		putchar(' ');
 		}
-		else
-		{
-			putchar(',');
-			putchar(' ');
-			a++;
-		}
+		num++;
 	}
+	putchar('\n');
 	return (0);
 }
