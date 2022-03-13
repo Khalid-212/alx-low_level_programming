@@ -1,33 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /**
- * main - main block
- * Description: prints all single digit numbers of base 10
- * starting from 0, followed by a new line.
- * Return: 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char d = '0';
+	int d;
+	char low;
 
-	while (d <= '9')
-	{
+	for (d = '0'; d <= '9'; d++)
 		putchar(d);
-		d++;
-	}
-
-	char c = 'a';
-
-	while (c <= 'f')
-	{
-		putchar(c);
-		c++;
-	}
-
+	for (low = 'a'; low <= 'f'; low++)
+		putchar(low);
 	putchar('\n');
 
 	return (0);
-
 }
