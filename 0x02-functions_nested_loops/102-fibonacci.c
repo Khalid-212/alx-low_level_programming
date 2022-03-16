@@ -1,28 +1,21 @@
-#include "stdio.h"
-
+#include <stdio.h>
 /**
- * main - prints the first 50 Fibonacci numbers starting with 1 and 2
- *
- * Return: int.
+ * main -  prints the first 50 Fibonacci numbers, starting with 1 and 2
+ * @void: no argument
+ * Return: 0
  */
-
 int main(void)
 {
-	long i = 0;
-	long j = 1;
-	int n = 0;
-	long fib;
+	long pri = 1, sec = 2, sum;
 
-	while (n < 50)
+	printf("1, 2");
+	while (sum < 20365011073)
 	{
-		fib = j + i;
-		if (n != 49)
-			printf("%ld, ", fib);
-		else
-			printf("%ld\n", fib);
-		i = j;
-		j = fib;
-		n += 1;
+		sum = pri + sec;
+		printf(", %lu", sum);
+		pri = sec;
+		sec = sum;
 	}
+	printf("\n");
 	return (0);
 }

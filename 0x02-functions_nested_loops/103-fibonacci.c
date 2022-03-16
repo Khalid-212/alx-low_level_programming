@@ -1,24 +1,24 @@
 #include <stdio.h>
 /**
-  * main - sum even fibonacci numbers under 4 million.
-  * Return: Nothing.
-  */
+ * main - write a program that finds and prints the sum of
+ * the even-valued terms, followed by a new line.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	unsigned long count, i, j, k, sums;
+	long int a = 1, b = 2, sum = 0, res = 2;
 
-	i = sums = 0;
-	j = 1;
-	for (count = 0; count < 50; count++)
+	while (sum < 4000000)
 	{
-		k = i + j;
-		i = j;
-		j = k;
-		if (k % 2 == 0 && k < 4000000)
+		sum = a + b;
+		a = b;
+		b = sum;
+		if (sum % 2 == 0)
 		{
-			sums += k;
+			res += sum;
 		}
 	}
-	printf("%lu\n", sums);
+	printf("%li\n", res);
 	return (0);
 }
