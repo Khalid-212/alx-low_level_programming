@@ -1,1 +1,1 @@
-Functions in C
+new readme
