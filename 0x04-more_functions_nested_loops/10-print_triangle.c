@@ -1,30 +1,30 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_triangle - function that prints a square, followed by a new line
- * @size: size of triangle
- * Return: nothing.
+ * print_triangle -  a function that prints a triangle, followed by a new line.
+ * @size: An input integer
+ * Return: Always 0
  */
-
 void print_triangle(int size)
 {
-	int row, col, aux;
+	int i = 0, j, n = size - 1;
 
 	if (size > 0)
 	{
-		for (row = 0; row < size; row++)
+		for (; i < size; i++)
 		{
-			for (col = 0; col < size; col++)
+			for (j = 0; j < size; j++)
 			{
-				aux = (size - row) - 1;
-				if (col < aux)
+				if (j < n)
 					_putchar(' ');
 				else
-					_putchar(35);
+					_putchar('#');
 			}
+			n--;
 			_putchar('\n');
 		}
 	}
 	else
 		_putchar('\n');
 }
+
